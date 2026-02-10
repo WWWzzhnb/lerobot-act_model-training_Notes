@@ -76,7 +76,7 @@ conda list | grep ffmpeg
 
 
 ### 4. 更换TorchCodec版本
-![alt text](<images/01_torchcodec & torch对应关系.png>)
+![alt text](<01_torchcodec & torch对应关系.png>)
 ```bash
 # 查看 torchcodec 版本:
 pip list | grep torchcodec
@@ -104,8 +104,7 @@ pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https
 python -c "import torch; print(f'PyTorch版本: {torch.__version__}'); print(f'CUDA可用: {torch.cuda.is_available()}'); print(f'GPU数量: {torch.cuda.device_count()}')"
 ```
 理想的验证结果是：第一行显示版本号，第二行显示 True，第三行显示GPU数量。这证明PyTorch和GPU驱动、CUDA兼容性良好。如图所示：
-![alt text](images/02_验证PyTorch.png)
-
+![alt text](02_验证PyTorch.png)
 
 ### 6. 克隆lerobot仓库
 ```bash
@@ -280,8 +279,7 @@ source ~/.bashrc
 nvidia-smi
 ```
 输出截图为：
-![alt text](images/03_nvidia-smi_显卡状态.png)
-
+![alt text](03_nvidia-smi_显卡状态.png)
 #### （2）查看GPU实时状态
 **安装可视化工具 gpustat：**
 ```bash
@@ -294,8 +292,7 @@ gpustat -i -u -c
 # Ctrl+C 退出
 ```
 如图所示：
-![alt text](images/04_gpustat_显卡状态.png)
-
+![alt text](04_gpustat_显卡状态.png)
 
 ### 2. 训练模型（单卡）
 ```bash
@@ -320,11 +317,8 @@ lerobot-train \
   --policy.push_to_hub=false
 ```
 若成功，会在output_dir目录下生成模型文件，输出类似如下信息：
-![alt text](images/05_训练日志_单卡.png)
-![alt text](images/06_训练日志_单卡.png)
-
-
-
+![alt text](05_训练日志_单卡.png)
+![alt text](06_训练日志_单卡.png)
 
 ### 3. 训练模型（多卡）
 
